@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="pt-5">
+    
+    <div id="container" class="m-auto rounded">
+      <form  name="calculator">
+    <div id="display-div" class="mb-2 mt-2">
+      <input type="text" name="display" class="rounded" id="display">
+    </div>
+    <div id="keypads" class="keypads">
+      <div class="row">
+      <input type="button" value="7" name="btn7" id="btn7" class="numbers col-3 bg-primary"  onclick="createFirstno()">
+      <input type="button" value="8" name="btn8" id="btn8" class="numbers col-3 bg-primary"  onclick="createFirstno()">
+      <input type="button" value="9" name="btn9" id="btn9" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="X" name="backspace" id="backspace" class="col-3 bg-danger" ><br>
+    </div>
+    <div class="row">
+      <input type="button" value="4" name="btn4" id="btn4" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="5" name="btn5" id="btn5" class="numbers col-3 bg-primary" onclick="createFirstno()"> 
+      <input type="button" value="6" name="btn6" id="btn6" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="/" name="div" id="div" class="operator col-3" onclick="createAllnumbersArr()"><br>
+    </div>
+    <div class="row">
+      <input type="button" value="1" name="btn1" id="btn1" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="2" name="btn2" id="btn2" class="numbers col-3 bg-primary" onclick="createFirstno()"> 
+      <input type="button" value="3" name="btn3" id="btn3" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="x" name="mul" id="mul" class="operator col-3 " onclick="createAllnumbersArr()"><br>
+    </div>
+    <div class="row">
+      <input type="button" value="." name="dot" id="dot" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="0" name="btn0" id="btn0" class="numbers col-3 bg-primary" onclick="createFirstno()">
+      <input type="button" value="AC" name="AC" id="AC" class="col-3 bg-danger" onclick="resetDisplay()">
+      <input type="button" value="-" name="sub" id="sub" class="operator col-3" onclick="createAllnumbersArr()"><br>
+    </div>
+    <div class="row">
+      <input type="button" value="=" name="equalTo" id="equalTo" class="col-9 bg-warning" onclick="evaluateTrig()">
+      <input type="button" value="+" name="add" id="add" class="operator col-3" onclick="createAllnumbersArr()">
+    </div>
+
+    </div>
+
+    <div id="higherFunctions">
+      
+            <i class="fa fa-chevron-down " data-toggle="collapse" data-target="#contentId"  aria-expanded="false"
+            aria-controls="contentId"></i>
+        
+      
+      <div class="collapse" id="contentId">
+    <div class="row">
+      <input type="button" class="higher-func col-3" id="sin" name="sin" value="sin" onclick="higherFunctions()">
+      <input type="button" class="higher-func col-3" id="cos" name="cos" value="cos" onclick="higherFunctions()">
+      <input type="button" class="higher-func col-3" id="tan" name="tan" value="tan" onclick="higherFunctions()">
+      <input type="button" class="higher-func col-3" id="log" name="log" value="log" onclick="higherFunctions()">
+    </div>
+    <div class="row">
+      <input type="button" class="higher-func col-3" id="ln" name="ln" value="ln" onclick="higherFunctions()">
+      <input type="button" class="higher-func col-3" id="sqrt" name="sqrt" value="sqrt">
+      <input type="button" class="higher-func col-3" id="brack1" name="brack1" value="(">
+      <input type="button" class="higher-func col-3" id="brack2" name="brack2" value=")">
+    </div>
+    <div class="row">
+      <input type="button" class="higher-func col-3" id="fact" name="fact" value="!">
+      <input type="button" class="higher-func col-3" id="pi" name="pi" value="pi">
+      <input type="button" class="higher-func col-3" id="pow" name="pow" value="^">
+      <input type="button" class="higher-func col-3" id="exp" name="exp" value="e">
+    </div>
+      </div>
+    </div>
+    </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="main.js"></script> 
+    <script src="higher-func.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
